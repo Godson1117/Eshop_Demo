@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.tabs-container {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #cbc8c8;
+  border-radius: 5px;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 15px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1 0 auto; 
+}
+
+.tab.active {
+  background-color: #030303;
+  color: #fff;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.circle-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle-container::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  position: relative;
+  margin-bottom: 20px; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  flex-grow: 1;  
+}
+
+.details h2 {
+  font-size: 17px;
+  margin: 10px 0;
+  display: inline;
+}
+
+.details .brand {
+  color: #777;
+  font-size: 12px;
+  display: inline;
+  margin-left: 20px;
+}
+
+.details .price {
+  font-size: 12px;
+  margin: 10px 0;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.details .old-price {
+  text-decoration: line-through;
+  color: #777;
+  margin-left: 10px;
+}
+
+.details .discount {
+  color: red;
+  margin-left: 10px;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+  
+}
+
+
+@media (max-width: 765px) {
+  .content-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details h2 {
+    font-size: 14px;
+  }
+
+  .details .price {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tab{
+    padding: 15px 20px;
+  }
+
+  .content-container {
+    width: 95%;
+  }
+
+  .details h2 {
+    font-size: 16px;
+  }
+
+  .details .price {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .tab{
+    padding: 15px 40px;
+  
+  }
+
+  .content-container {
+    width: 80%;
+  }
+
+  .details h2 {
+    font-size: 18px;
+  }
+
+  .details .price {
+    font-size: 16px;
+  }
+}
